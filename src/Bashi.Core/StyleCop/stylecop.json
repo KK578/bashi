@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Bashi",
+      "copyrightText": "Copyright {copyrightStart}-{copyrightEnd} (c) {companyName}. All rights reserved.\nLicensed under the {licenseName} license. See {licenseName}.md for full details.",
+      "xmlHeader": false,
+      "variables": {
+        "copyrightStart": "2019",
+        "copyrightEnd": "2019",
+        "licenseName": "BSD-3-Clause",
+        "licenseFile": "LICENSE"
+      }
+    }
+  }
+}
