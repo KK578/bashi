@@ -5,7 +5,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="StyleCop\stylecop.json" />
+        <AdditionalFiles Include="StyleCop\stylecop.json"/>
+        <None Include="..\..\Directory.build.props">
+            <Link>MSBuild\Directory.build.props</Link>
+        </None>
     </ItemGroup>
 
 </Project>
