@@ -25,16 +25,6 @@ jobs:
         dotnet-version: 3.1.100
 
     - name: "[Build] NuGet Restore"
-      id: cache-nuget
-      uses: actions/cache@v1
-      with:
-        path: ~/.nuget/packages
-        key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-nuget-
-
-    - name: "[Build] NuGet Restore"
-      if: steps.cache-nuget.outputs.cache-hit != 'true'
       run: dotnet restore
 
     - name: "[Build] Build Solution"
