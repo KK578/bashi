@@ -26,7 +26,8 @@ jobs:
 
     - name: Build Solution
       run: |
-        VERSION=$(cat /home/runner/work/AWSSamExample/AWSSamExample/version.txt)
+        pwd
+        VERSION=$(cat /home/runner/work/bashi/bashi/version.txt)
         dotnet build --configuration Release /p:Version=$VERSION;AssemblyVersion=$VERSION
 
     - name: Run Bashi.Console
