@@ -34,4 +34,4 @@ jobs:
         dotnet build --configuration Release /p:Version=$VERSION;AssemblyVersion=$VERSION
 
     - name: "[Test] Run Bashi.Console"
-      run: dotnet /home/runner/work/bashi/bashi/src/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --help
+      run: dotnet /home/runner/work/bashi/bashi/src/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --version
