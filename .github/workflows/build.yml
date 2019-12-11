@@ -3,14 +3,22 @@ name: Build
 on: [push]
 
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v1
 
+    - name: Ensure 'master' branch exists
+      run: |
+        git fetch --tags
+        git branch --create-reflog master origin/master
+
+  setup:
+    runs-on: ubuntu-latest
+    steps:
     - name: Get GitVersion
+      
       uses: docker://gittools/gitversion:5.1.3-linux-netcoreapp2.1
       with:
         args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/version.txt\""
@@ -20,6 +28,10 @@ jobs:
       with:
         dotnet-version: 3.1.100
 
+  build:
+   runs-on: ubuntu-latest
+   needs: [checkout, setup]
+   steps:
     - name: Build Solution
       run: |
         VERSION=$(cat /home/runner/work/AWSSamExample/AWSSamExample/version.txt)
