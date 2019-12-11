@@ -15,4 +15,9 @@
         </AdditionalFiles>
     </ItemGroup>
 
+    <ItemGroup>
+        <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.4.4"/>
+        <PackageReference Include="McMaster.Extensions.Hosting.CommandLine" Version="2.4.4"/>
+    </ItemGroup>
+
 </Project>
