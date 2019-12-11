@@ -21,4 +21,9 @@ jobs:
         dotnet-version: 3.1.100
 
     - name: Build Solution
-      run: dotnet build --configuration Release
+      run: |
+        VERSION=$(cat /home/runner/work/AWSSamExample/AWSSamExample/version.txt)
+        dotnet build --configuration Release /p:Version=$VERSION;AssemblyVersion=$VERSION
+
+    - name: Run Bashi.Console
+      run: dotnet /home/runner/work/bashi/bashi/src/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --help
