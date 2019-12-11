@@ -14,28 +14,41 @@ jobs:
         git fetch --tags
         git branch --create-reflog master origin/master
 
+
   setup:
     runs-on: ubuntu-latest
     steps:
     - name: Get GitVersion
-      
       uses: docker://gittools/gitversion:5.1.3-linux-netcoreapp2.1
       with:
         args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/version.txt\""
+
+    - name: "[Artifact] Upload GitVersion"
+      uses: actions/upload-artifact@v1
+      with:
+        name: GitVersion
+        path: /github/workspace/version.txt
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
 
-  build:
-   runs-on: ubuntu-latest
-   needs: [checkout, setup]
-   steps:
-    - name: Build Solution
-      run: |
-        VERSION=$(cat /home/runner/work/AWSSamExample/AWSSamExample/version.txt)
-        dotnet build --configuration Release /p:Version=$VERSION;AssemblyVersion=$VERSION
 
-    - name: Run Bashi.Console
-      run: dotnet /home/runner/work/bashi/bashi/src/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --help
+  build:
+    runs-on: ubuntu-latest
+    needs: [checkout, setup]
+    steps:
+      - name: "[Artifact] Download GitVersion"
+        uses: actions/download-artifact@v1
+        with:
+          name: GitVersion
+          path: /github/workspace/version.txt
+
+      - name: Build Solution
+        run: |
+          VERSION=$(cat /home/runner/work/AWSSamExample/AWSSamExample/version.txt)
+          dotnet build --configuration Release /p:Version=$VERSION;AssemblyVersion=$VERSION
+
+      - name: Run Bashi.Console
+        run: dotnet /home/runner/work/bashi/bashi/src/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --help
