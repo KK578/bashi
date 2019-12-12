@@ -6,8 +6,8 @@
 
     <ItemGroup>
         <AdditionalFiles Include="StyleCop\stylecop.json" />
-        <None Include="..\..\Directory.build.props">
-            <Link>MSBuild\Directory.build.props</Link>
+        <None Include="..\..\Directory.Build.props">
+            <Link>MSBuild\Directory.Build.props</Link>
         </None>
     </ItemGroup>
 
