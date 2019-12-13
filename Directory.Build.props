@@ -1,4 +1,19 @@
 <Project>
+    <Choose>
+        <When Condition="$(MSBuildProjectName.Contains('Tests'))">
+            <PropertyGroup>
+                <OutputPath>$(SolutionDir)\build\test\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
+                <IntermediateOutputPath>$(SolutionDir)\build\test\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <OutputPath>$(SolutionDir)\build\out\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
+                <IntermediateOutputPath>$(SolutionDir)\build\out\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+
     <PropertyGroup>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
@@ -10,6 +25,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.113" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.113"/>
     </ItemGroup>
 </Project>
