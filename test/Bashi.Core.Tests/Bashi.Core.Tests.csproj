@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\src\Bashi.Core\Bashi.Core.csproj" />
         <ProjectReference Include="..\Bashi.Tests.Framework\Bashi.Tests.Framework.csproj" />
     </ItemGroup>
 
