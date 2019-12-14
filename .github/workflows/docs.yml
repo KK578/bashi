@@ -1,0 +1,25 @@
+name: Update Documentation
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: "[Setup] Checkout Repository"
+      uses: actions/checkout@v1
+
+    - name: "[Setup] Install docfx"
+      run: choco install -y docfx
+
+    - name: "[Build] Build Documentation"
+      run: docfx docs/docfx.json
+
+    - name: "[Build] Zip Documentation"
+      run: 7za a -tzip site.zip docs/_site/
+
+    - name: "[Upload] Upload Documentation Artifact"
+      uses: actions/upload-artifact@v1
+      with:
+        name: docs
+        path: site.zip
