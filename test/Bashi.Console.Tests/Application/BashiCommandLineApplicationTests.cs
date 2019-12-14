@@ -23,6 +23,7 @@ namespace Bashi.Console.Tests.Application
         }
 
         [Test]
+        [Ignore("Not yet implemented.")]
         public async Task GivenAnAnimeDownloadCommand_ThenShouldDownloadToTheSpecifiedOutput()
         {
             var arguments = this.CreateArguments("anime", "download", "\"Shinchou Yuusha\"", "-s", "1", "-e", "1", "-o", "videos/");
