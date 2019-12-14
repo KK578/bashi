@@ -23,11 +23,6 @@ jobs:
     - name: "[Build] Build Documentation"
       run: docfx docs/docfx.json
 
-    - name: "[Setup] Create GitVersion"
-      uses: docker://gittools/gitversion:5.1.3-linux-netcoreapp2.1
-      with:
-        args: /github/workspace /nofetch /exec /bin/sh /execargs "-c \"echo $GitVersion_FullSemVer > /github/workspace/bashi/docs/_site/VERSION\""
-
     - name: "[Upload] Upload Documentation Artifact"
       uses: actions/upload-artifact@v1
       with:
@@ -46,16 +41,14 @@ jobs:
     - name: "[Deploy] Deploy to GitHub Pages"
       run: |
         # Setup
-        VERSION=$(cat VERSION)
         REMOTE_REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         REPONAME="$(echo $GITHUB_REPOSITORY| cut -d'/' -f 2)"
         REMOTE_BRANCH=gh-pages
-        echo $VERSION
         # Prepare Repository
         git init
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        git commit -m "Deploy to GitHub Pages ($VERSION)";
+        git commit -m "Deploy to GitHub Pages";
         # Push
         git push --force $REMOTE_REPO master:$REMOTE_BRANCH
         curl -XPOST -H"Authorization: token ${GITHUB_TOKEN}" -H"Accept: application/vnd.github.mister-fantastic-preview+json" https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds && \ # https://git.io/fjsFk
