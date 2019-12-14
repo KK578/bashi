@@ -44,7 +44,7 @@ jobs:
         name: docs
 
     - name: "[Deploy] Deploy to GitHub Pages"
-      runs: |
+      run: |
         # Setup
         VERSION=$(cat VERSION)
         REMOTE_REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
