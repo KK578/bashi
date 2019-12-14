@@ -18,8 +18,24 @@ jobs:
     - name: "[Build] Build Documentation"
       run: docfx docs/docfx.json
 
+    - name: "[Upload] Upload Documentation Artifact"
+      uses: actions/upload-artifact@v1
+      with:
+        name: docs
+        path : docs/_site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: "[Download] Download Documentation Artifact"
+      uses: actions/download-artifact@v1
+      with:
+        name: docs
+
     - name: "[Deploy] to GitHub Pages"
       uses: "maxheld83/ghpages@v0.2.1"
       with:
-        GH_PAT: ${{ secrets.GH_PAT }}
-        BUILD_DIR: "docs/_site/"
+        BUILD_DIR: "."
+        GH_PAT: ${{ secrets.GITHUB_TOKEN }}`
+      secrets: ["GH_PAT"]
