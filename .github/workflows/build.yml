@@ -38,7 +38,14 @@ jobs:
           dotnet build --configuration Release /p:Version=$VERSION;AssemblyVersion=$VERSION
 
       - name: "[Test] Run Tests"
-        run: dotnet test --configuration Release --no-build
+        run: |
+          dotnet test --configuration Release --no-build test/Bashi.Core.Tests/Bashi.Core.Tests.csproj       /p:CollectCoverage=true /p:CoverletOutput=../../coverage/
+          dotnet test --configuration Release --no-build test/Bashi.Console.Tests/Bashi.Console.Tests.csproj /p:CollectCoverage=true /p:CoverletOutput=../../coverage/ /p:MergeWith="../../coverage/coverage.json" /p:CoverletOutputFormat="lcov"
 
       - name: "[Test] Run Bashi.Console"
         run: dotnet /home/runner/work/bashi/bashi/build/out/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --version
+
+      - name: "[Upload] Upload Code Coverage to Coveralls"
+        uses: coverallsapp/github-action@v1.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
