@@ -2,14 +2,14 @@
     <Choose>
         <When Condition="$(MSBuildProjectName.Contains('Tests'))">
             <PropertyGroup>
-                <OutputPath>$(SolutionDir)\build\test\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
-                <IntermediateOutputPath>$(SolutionDir)\build\test\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
+                <OutputPath>$(MSBuildThisFileDirectory)\build\test\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
+                <IntermediateOutputPath>$(MSBuildThisFileDirectory)\build\test\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
             </PropertyGroup>
         </When>
         <Otherwise>
             <PropertyGroup>
-                <OutputPath>$(SolutionDir)\build\out\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
-                <IntermediateOutputPath>$(SolutionDir)\build\out\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
+                <OutputPath>$(MSBuildThisFileDirectory)\build\out\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
+                <IntermediateOutputPath>$(MSBuildThisFileDirectory)\build\out\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
             </PropertyGroup>
         </Otherwise>
     </Choose>
