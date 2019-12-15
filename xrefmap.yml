@@ -1,0 +1,249 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Bashi.Console
+  name: Bashi.Console
+  href: api/Bashi.Console.html
+  commentId: N:Bashi.Console
+  fullName: Bashi.Console
+  nameWithType: Bashi.Console
+- uid: Bashi.Console.Application
+  name: Bashi.Console.Application
+  href: api/Bashi.Console.Application.html
+  commentId: N:Bashi.Console.Application
+  fullName: Bashi.Console.Application
+  nameWithType: Bashi.Console.Application
+- uid: Bashi.Console.Application.Anime
+  name: Bashi.Console.Application.Anime
+  href: api/Bashi.Console.Application.Anime.html
+  commentId: N:Bashi.Console.Application.Anime
+  fullName: Bashi.Console.Application.Anime
+  nameWithType: Bashi.Console.Application.Anime
+- uid: Bashi.Console.Application.Anime.BashiAnimeCommand
+  name: BashiAnimeCommand
+  href: api/Bashi.Console.Application.Anime.BashiAnimeCommand.html
+  commentId: T:Bashi.Console.Application.Anime.BashiAnimeCommand
+  fullName: Bashi.Console.Application.Anime.BashiAnimeCommand
+  nameWithType: BashiAnimeCommand
+- uid: Bashi.Console.Application.Anime.BashiAnimeDownloadCommand
+  name: BashiAnimeDownloadCommand
+  href: api/Bashi.Console.Application.Anime.BashiAnimeDownloadCommand.html
+  commentId: T:Bashi.Console.Application.Anime.BashiAnimeDownloadCommand
+  fullName: Bashi.Console.Application.Anime.BashiAnimeDownloadCommand
+  nameWithType: BashiAnimeDownloadCommand
+- uid: Bashi.Console.Application.BashiCommandLineApplication
+  name: BashiCommandLineApplication
+  href: api/Bashi.Console.Application.BashiCommandLineApplication.html
+  commentId: T:Bashi.Console.Application.BashiCommandLineApplication
+  fullName: Bashi.Console.Application.BashiCommandLineApplication
+  nameWithType: BashiCommandLineApplication
+- uid: Bashi.Console.Application.BashiCommandLineApplication.Version
+  name: Version
+  href: api/Bashi.Console.Application.BashiCommandLineApplication.html#Bashi_Console_Application_BashiCommandLineApplication_Version
+  commentId: P:Bashi.Console.Application.BashiCommandLineApplication.Version
+  fullName: Bashi.Console.Application.BashiCommandLineApplication.Version
+  nameWithType: BashiCommandLineApplication.Version
+- uid: Bashi.Console.Application.BashiCommandLineApplication.Version*
+  name: Version
+  href: api/Bashi.Console.Application.BashiCommandLineApplication.html#Bashi_Console_Application_BashiCommandLineApplication_Version_
+  commentId: Overload:Bashi.Console.Application.BashiCommandLineApplication.Version
+  isSpec: "True"
+  fullName: Bashi.Console.Application.BashiCommandLineApplication.Version
+  nameWithType: BashiCommandLineApplication.Version
+- uid: Bashi.Console.Program
+  name: Program
+  href: api/Bashi.Console.Program.html
+  commentId: T:Bashi.Console.Program
+  fullName: Bashi.Console.Program
+  nameWithType: Program
+- uid: Bashi.Console.Program.Main(System.String[])
+  name: Main(String[])
+  href: api/Bashi.Console.Program.html#Bashi_Console_Program_Main_System_String___
+  commentId: M:Bashi.Console.Program.Main(System.String[])
+  name.vb: Main(String())
+  fullName: Bashi.Console.Program.Main(System.String[])
+  fullName.vb: Bashi.Console.Program.Main(System.String())
+  nameWithType: Program.Main(String[])
+  nameWithType.vb: Program.Main(String())
+- uid: Bashi.Console.Program.Main*
+  name: Main
+  href: api/Bashi.Console.Program.html#Bashi_Console_Program_Main_
+  commentId: Overload:Bashi.Console.Program.Main
+  isSpec: "True"
+  fullName: Bashi.Console.Program.Main
+  nameWithType: Program.Main
+- uid: Bashi.Core.TinyTypes
+  name: Bashi.Core.TinyTypes
+  href: api/Bashi.Core.TinyTypes.html
+  commentId: N:Bashi.Core.TinyTypes
+  fullName: Bashi.Core.TinyTypes
+  nameWithType: Bashi.Core.TinyTypes
+- uid: Bashi.Core.TinyTypes.TinyType`1
+  name: TinyType<T>
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html
+  commentId: T:Bashi.Core.TinyTypes.TinyType`1
+  name.vb: TinyType(Of T)
+  fullName: Bashi.Core.TinyTypes.TinyType<T>
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T)
+  nameWithType: TinyType<T>
+  nameWithType.vb: TinyType(Of T)
+- uid: Bashi.Core.TinyTypes.TinyType`1.#ctor(`0)
+  name: TinyType(T)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1__ctor__0_
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.#ctor(`0)
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.TinyType(T)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).TinyType(T)
+  nameWithType: TinyType<T>.TinyType(T)
+  nameWithType.vb: TinyType(Of T).TinyType(T)
+- uid: Bashi.Core.TinyTypes.TinyType`1.#ctor*
+  name: TinyType
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1__ctor_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.#ctor
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.TinyType
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).TinyType
+  nameWithType: TinyType<T>.TinyType
+  nameWithType.vb: TinyType(Of T).TinyType
+- uid: Bashi.Core.TinyTypes.TinyType`1.CompareTo(Bashi.Core.TinyTypes.TinyType{`0})
+  name: CompareTo(TinyType<T>)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_CompareTo_Bashi_Core_TinyTypes_TinyType__0__
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.CompareTo(Bashi.Core.TinyTypes.TinyType{`0})
+  name.vb: CompareTo(TinyType(Of T))
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.CompareTo(Bashi.Core.TinyTypes.TinyType<T>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo(Bashi.Core.TinyTypes.TinyType(Of T))
+  nameWithType: TinyType<T>.CompareTo(TinyType<T>)
+  nameWithType.vb: TinyType(Of T).CompareTo(TinyType(Of T))
+- uid: Bashi.Core.TinyTypes.TinyType`1.CompareTo(System.Nullable{System.Object})
+  name: CompareTo(Nullable<Object>)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_CompareTo_System_Nullable_System_Object__
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.CompareTo(System.Nullable{System.Object})
+  name.vb: CompareTo(Nullable(Of Object))
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.CompareTo(System.Nullable<System.Object>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo(System.Nullable(Of System.Object))
+  nameWithType: TinyType<T>.CompareTo(Nullable<Object>)
+  nameWithType.vb: TinyType(Of T).CompareTo(Nullable(Of Object))
+- uid: Bashi.Core.TinyTypes.TinyType`1.CompareTo*
+  name: CompareTo
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_CompareTo_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.CompareTo
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.CompareTo
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo
+  nameWithType: TinyType<T>.CompareTo
+  nameWithType.vb: TinyType(Of T).CompareTo
+- uid: Bashi.Core.TinyTypes.TinyType`1.Equals(Bashi.Core.TinyTypes.TinyType{`0})
+  name: Equals(TinyType<T>)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_Bashi_Core_TinyTypes_TinyType__0__
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.Equals(Bashi.Core.TinyTypes.TinyType{`0})
+  name.vb: Equals(TinyType(Of T))
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equals(Bashi.Core.TinyTypes.TinyType<T>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals(Bashi.Core.TinyTypes.TinyType(Of T))
+  nameWithType: TinyType<T>.Equals(TinyType<T>)
+  nameWithType.vb: TinyType(Of T).Equals(TinyType(Of T))
+- uid: Bashi.Core.TinyTypes.TinyType`1.Equals(System.Nullable{System.Object})
+  name: Equals(Nullable<Object>)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_System_Nullable_System_Object__
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.Equals(System.Nullable{System.Object})
+  name.vb: Equals(Nullable(Of Object))
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equals(System.Nullable<System.Object>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals(System.Nullable(Of System.Object))
+  nameWithType: TinyType<T>.Equals(Nullable<Object>)
+  nameWithType.vb: TinyType(Of T).Equals(Nullable(Of Object))
+- uid: Bashi.Core.TinyTypes.TinyType`1.Equals*
+  name: Equals
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.Equals
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equals
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals
+  nameWithType: TinyType<T>.Equals
+  nameWithType.vb: TinyType(Of T).Equals
+- uid: Bashi.Core.TinyTypes.TinyType`1.GetHashCode
+  name: GetHashCode()
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_GetHashCode
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.GetHashCode
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.GetHashCode()
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).GetHashCode()
+  nameWithType: TinyType<T>.GetHashCode()
+  nameWithType.vb: TinyType(Of T).GetHashCode()
+- uid: Bashi.Core.TinyTypes.TinyType`1.GetHashCode*
+  name: GetHashCode
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_GetHashCode_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.GetHashCode
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.GetHashCode
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).GetHashCode
+  nameWithType: TinyType<T>.GetHashCode
+  nameWithType.vb: TinyType(Of T).GetHashCode
+- uid: Bashi.Core.TinyTypes.TinyType`1.op_Equality(Bashi.Core.TinyTypes.TinyType{`0},Bashi.Core.TinyTypes.TinyType{`0})
+  name: Equality(TinyType<T>, TinyType<T>)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_op_Equality_Bashi_Core_TinyTypes_TinyType__0__Bashi_Core_TinyTypes_TinyType__0__
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.op_Equality(Bashi.Core.TinyTypes.TinyType{`0},Bashi.Core.TinyTypes.TinyType{`0})
+  name.vb: Equality(TinyType(Of T), TinyType(Of T))
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equality(Bashi.Core.TinyTypes.TinyType<T>, Bashi.Core.TinyTypes.TinyType<T>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equality(Bashi.Core.TinyTypes.TinyType(Of T), Bashi.Core.TinyTypes.TinyType(Of T))
+  nameWithType: TinyType<T>.Equality(TinyType<T>, TinyType<T>)
+  nameWithType.vb: TinyType(Of T).Equality(TinyType(Of T), TinyType(Of T))
+- uid: Bashi.Core.TinyTypes.TinyType`1.op_Equality*
+  name: Equality
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_op_Equality_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.op_Equality
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equality
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equality
+  nameWithType: TinyType<T>.Equality
+  nameWithType.vb: TinyType(Of T).Equality
+- uid: Bashi.Core.TinyTypes.TinyType`1.op_Implicit(Bashi.Core.TinyTypes.TinyType{`0})~`0
+  name: Implicit(TinyType<T> to T)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_op_Implicit_Bashi_Core_TinyTypes_TinyType__0____0
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.op_Implicit(Bashi.Core.TinyTypes.TinyType{`0})~`0
+  name.vb: Widening(TinyType(Of T) to T)
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Implicit(Bashi.Core.TinyTypes.TinyType<T> to T)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Widening(Bashi.Core.TinyTypes.TinyType(Of T) to T)
+  nameWithType: TinyType<T>.Implicit(TinyType<T> to T)
+  nameWithType.vb: TinyType(Of T).Widening(TinyType(Of T) to T)
+- uid: Bashi.Core.TinyTypes.TinyType`1.op_Implicit*
+  name: Implicit
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_op_Implicit_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Implicit
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Widening
+  nameWithType: TinyType<T>.Implicit
+  nameWithType.vb: TinyType(Of T).Widening
+- uid: Bashi.Core.TinyTypes.TinyType`1.op_Inequality(Bashi.Core.TinyTypes.TinyType{`0},Bashi.Core.TinyTypes.TinyType{`0})
+  name: Inequality(TinyType<T>, TinyType<T>)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_op_Inequality_Bashi_Core_TinyTypes_TinyType__0__Bashi_Core_TinyTypes_TinyType__0__
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.op_Inequality(Bashi.Core.TinyTypes.TinyType{`0},Bashi.Core.TinyTypes.TinyType{`0})
+  name.vb: Inequality(TinyType(Of T), TinyType(Of T))
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Inequality(Bashi.Core.TinyTypes.TinyType<T>, Bashi.Core.TinyTypes.TinyType<T>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Inequality(Bashi.Core.TinyTypes.TinyType(Of T), Bashi.Core.TinyTypes.TinyType(Of T))
+  nameWithType: TinyType<T>.Inequality(TinyType<T>, TinyType<T>)
+  nameWithType.vb: TinyType(Of T).Inequality(TinyType(Of T), TinyType(Of T))
+- uid: Bashi.Core.TinyTypes.TinyType`1.op_Inequality*
+  name: Inequality
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_op_Inequality_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.op_Inequality
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Inequality
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Inequality
+  nameWithType: TinyType<T>.Inequality
+  nameWithType.vb: TinyType(Of T).Inequality
+- uid: Bashi.Core.TinyTypes.TinyType`1.Value
+  name: Value
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Value
+  commentId: P:Bashi.Core.TinyTypes.TinyType`1.Value
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Value
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Value
+  nameWithType: TinyType<T>.Value
+  nameWithType.vb: TinyType(Of T).Value
+- uid: Bashi.Core.TinyTypes.TinyType`1.Value*
+  name: Value
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Value_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyType`1.Value
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Value
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Value
+  nameWithType: TinyType<T>.Value
+  nameWithType.vb: TinyType(Of T).Value
