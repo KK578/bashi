@@ -42,6 +42,12 @@ jobs:
         with:
           name: docs
 
+      - name: "[Download] Download Material Theme"
+        run: |
+          mkdir docs/templates
+          wget -O /tmp/material.zip https://github.com/ovasquez/docfx-material/releases/download/0.3.0/material.zip
+          unzip /tmp/material.zip -d docs/templates
+
       - name: "[Deploy] Deploy to GitHub Pages"
         uses: JamesIves/github-pages-deploy-action@3.0.4
         with:
