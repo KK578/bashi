@@ -2,7 +2,6 @@
 // Licensed under the BSD-3-Clause license. See BSD-3-Clause.md for full details.
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Bashi.Core.TinyTypes
@@ -40,7 +39,7 @@ namespace Bashi.Core.TinyTypes
         /// </summary>
         /// <param name="arg">The instance of the TinyType.</param>
         /// <returns>Returns <see cref="Value"/>.</returns>
-        public static implicit operator T(TinyType<T> arg) => arg.Value ?? default;
+        public static implicit operator T(TinyType<T> arg) => arg.Value;
 
         /// <summary>
         /// Overriding operator for equality check between two <see cref="TinyType{T}"/> instances.
@@ -98,7 +97,7 @@ namespace Bashi.Core.TinyTypes
                 return true;
             }
 
-            return EqualityComparer<T>.Default.Equals(this.Value, other.Value);
+            return this.Equals(other.Value);
         }
 
         /// <inheritdoc />
@@ -127,6 +126,16 @@ namespace Bashi.Core.TinyTypes
             }
 
             return this.CompareTo((TinyType<T>)obj);
+        }
+
+        /// <summary>
+        /// Indicates whether the underlying object is equal to another object of the same type.
+        /// </summary>
+        /// <param name="other">Other underlying value.</param>
+        /// <returns>Whether the underlying values are equal.</returns>
+        protected virtual bool Equals(T other)
+        {
+            return EqualityComparer<T>.Default.Equals(this.Value, other);
         }
     }
 }
