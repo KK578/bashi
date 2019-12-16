@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bashi.Console.Application.Anime.BashiAnimeCommand.html",
-          "hash": "w5vasr57Qi7B5Gs94MePCA=="
+          "hash": "zk8Tei68/WFljQYgpX8pRQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bashi.Console.Application.Anime.BashiAnimeDownloadCommand.html",
-          "hash": "vWLX0aqwISp0LOb8pNMrLw=="
+          "hash": "e10H0isuWSob4OGy/1k7NQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bashi.Console.Application.BashiCommandLineApplication.html",
-          "hash": "rXFOtmmhurpZJCWEVL0TWQ=="
+          "hash": "PBaDuGTdqQSDVnAAviWjMA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bashi.Console.Program.html",
-          "hash": "PixvJbBPNB+YWI1L1/qkVQ=="
+          "hash": "BvG6n1PC6TK9m/htBdYiiw=="
         }
       },
       "is_incremental": false,
@@ -89,11 +89,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Bashi.Core.TinyTypes.TinyString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Bashi.Core.TinyTypes.TinyString.html",
+          "hash": "Bp2IxyHJfhT4GCx8xFaOIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Bashi.Core.TinyTypes.TinyType-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Bashi.Core.TinyTypes.TinyType-1.html",
-          "hash": "fLk7iRUqgx/Z/xGvF1aXag=="
+          "hash": "1gID0s3kUoY6oV7PRwMY4w=="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Bashi.Core.TinyTypes.html",
-          "hash": "8YkKU9GPKWkcIhJbNIwYxQ=="
+          "hash": "ROaqBzSEFbLgE8JpZjEDCA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "M7FUfybHGb/LZBhQ3L9wrw=="
+          "hash": "R39OsL7rhhVSU+Aw4R/YVw=="
         }
       },
       "is_incremental": false,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "KuGK5hZDklPXw8MkG/4iSg=="
+          "hash": "UVC1h3acI18aAnYgQ7VWkw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "1s/DP6qJw8xtkf8QRnmOKg=="
+          "hash": "LUooiuoPaRTh8M0sOBpuvQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "xSwkz5fnfJtvWbSgWtYMtQ=="
+          "hash": "BCpncrz2tMX2Sg+JwltTHg=="
         }
       },
       "is_incremental": false,
@@ -195,16 +207,16 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 9,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

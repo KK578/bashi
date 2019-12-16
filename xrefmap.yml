@@ -78,6 +78,73 @@ references:
   commentId: N:Bashi.Core.TinyTypes
   fullName: Bashi.Core.TinyTypes
   nameWithType: Bashi.Core.TinyTypes
+- uid: Bashi.Core.TinyTypes.TinyString
+  name: TinyString
+  href: api/Bashi.Core.TinyTypes.TinyString.html
+  commentId: T:Bashi.Core.TinyTypes.TinyString
+  fullName: Bashi.Core.TinyTypes.TinyString
+  nameWithType: TinyString
+- uid: Bashi.Core.TinyTypes.TinyString.#ctor(System.String,System.StringComparer)
+  name: TinyString(String, StringComparer)
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString__ctor_System_String_System_StringComparer_
+  commentId: M:Bashi.Core.TinyTypes.TinyString.#ctor(System.String,System.StringComparer)
+  fullName: Bashi.Core.TinyTypes.TinyString.TinyString(System.String, System.StringComparer)
+  nameWithType: TinyString.TinyString(String, StringComparer)
+- uid: Bashi.Core.TinyTypes.TinyString.#ctor*
+  name: TinyString
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString__ctor_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyString.#ctor
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyString.TinyString
+  nameWithType: TinyString.TinyString
+- uid: Bashi.Core.TinyTypes.TinyString.comparer
+  name: comparer
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_comparer
+  commentId: F:Bashi.Core.TinyTypes.TinyString.comparer
+  fullName: Bashi.Core.TinyTypes.TinyString.comparer
+  nameWithType: TinyString.comparer
+- uid: Bashi.Core.TinyTypes.TinyString.CompareTo(Bashi.Core.TinyTypes.TinyType{System.String})
+  name: CompareTo(TinyType<String>)
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_CompareTo_Bashi_Core_TinyTypes_TinyType_System_String__
+  commentId: M:Bashi.Core.TinyTypes.TinyString.CompareTo(Bashi.Core.TinyTypes.TinyType{System.String})
+  name.vb: CompareTo(TinyType(Of String))
+  fullName: Bashi.Core.TinyTypes.TinyString.CompareTo(Bashi.Core.TinyTypes.TinyType<System.String>)
+  fullName.vb: Bashi.Core.TinyTypes.TinyString.CompareTo(Bashi.Core.TinyTypes.TinyType(Of System.String))
+  nameWithType: TinyString.CompareTo(TinyType<String>)
+  nameWithType.vb: TinyString.CompareTo(TinyType(Of String))
+- uid: Bashi.Core.TinyTypes.TinyString.CompareTo*
+  name: CompareTo
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_CompareTo_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyString.CompareTo
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyString.CompareTo
+  nameWithType: TinyString.CompareTo
+- uid: Bashi.Core.TinyTypes.TinyString.Equals(System.String)
+  name: Equals(String)
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_Equals_System_String_
+  commentId: M:Bashi.Core.TinyTypes.TinyString.Equals(System.String)
+  fullName: Bashi.Core.TinyTypes.TinyString.Equals(System.String)
+  nameWithType: TinyString.Equals(String)
+- uid: Bashi.Core.TinyTypes.TinyString.Equals*
+  name: Equals
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_Equals_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyString.Equals
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyString.Equals
+  nameWithType: TinyString.Equals
+- uid: Bashi.Core.TinyTypes.TinyString.GetHashCode
+  name: GetHashCode()
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_GetHashCode
+  commentId: M:Bashi.Core.TinyTypes.TinyString.GetHashCode
+  fullName: Bashi.Core.TinyTypes.TinyString.GetHashCode()
+  nameWithType: TinyString.GetHashCode()
+- uid: Bashi.Core.TinyTypes.TinyString.GetHashCode*
+  name: GetHashCode
+  href: api/Bashi.Core.TinyTypes.TinyString.html#Bashi_Core_TinyTypes_TinyString_GetHashCode_
+  commentId: Overload:Bashi.Core.TinyTypes.TinyString.GetHashCode
+  isSpec: "True"
+  fullName: Bashi.Core.TinyTypes.TinyString.GetHashCode
+  nameWithType: TinyString.GetHashCode
 - uid: Bashi.Core.TinyTypes.TinyType`1
   name: TinyType<T>
   href: api/Bashi.Core.TinyTypes.TinyType-1.html
@@ -130,6 +197,14 @@ references:
   fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo
   nameWithType: TinyType<T>.CompareTo
   nameWithType.vb: TinyType(Of T).CompareTo
+- uid: Bashi.Core.TinyTypes.TinyType`1.Equals(`0)
+  name: Equals(T)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals__0_
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.Equals(`0)
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equals(T)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals(T)
+  nameWithType: TinyType<T>.Equals(T)
+  nameWithType.vb: TinyType(Of T).Equals(T)
 - uid: Bashi.Core.TinyTypes.TinyType`1.Equals(Bashi.Core.TinyTypes.TinyType{`0})
   name: Equals(TinyType<T>)
   href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_Bashi_Core_TinyTypes_TinyType__0__
