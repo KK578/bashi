@@ -113,15 +113,14 @@ references:
   fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo(Bashi.Core.TinyTypes.TinyType(Of T))
   nameWithType: TinyType<T>.CompareTo(TinyType<T>)
   nameWithType.vb: TinyType(Of T).CompareTo(TinyType(Of T))
-- uid: Bashi.Core.TinyTypes.TinyType`1.CompareTo(System.Nullable{System.Object})
-  name: CompareTo(Nullable<Object>)
-  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_CompareTo_System_Nullable_System_Object__
-  commentId: M:Bashi.Core.TinyTypes.TinyType`1.CompareTo(System.Nullable{System.Object})
-  name.vb: CompareTo(Nullable(Of Object))
-  fullName: Bashi.Core.TinyTypes.TinyType<T>.CompareTo(System.Nullable<System.Object>)
-  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo(System.Nullable(Of System.Object))
-  nameWithType: TinyType<T>.CompareTo(Nullable<Object>)
-  nameWithType.vb: TinyType(Of T).CompareTo(Nullable(Of Object))
+- uid: Bashi.Core.TinyTypes.TinyType`1.CompareTo(System.Object)
+  name: CompareTo(Object)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_CompareTo_System_Object_
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.CompareTo(System.Object)
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.CompareTo(System.Object)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).CompareTo(System.Object)
+  nameWithType: TinyType<T>.CompareTo(Object)
+  nameWithType.vb: TinyType(Of T).CompareTo(Object)
 - uid: Bashi.Core.TinyTypes.TinyType`1.CompareTo*
   name: CompareTo
   href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_CompareTo_
@@ -140,15 +139,14 @@ references:
   fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals(Bashi.Core.TinyTypes.TinyType(Of T))
   nameWithType: TinyType<T>.Equals(TinyType<T>)
   nameWithType.vb: TinyType(Of T).Equals(TinyType(Of T))
-- uid: Bashi.Core.TinyTypes.TinyType`1.Equals(System.Nullable{System.Object})
-  name: Equals(Nullable<Object>)
-  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_System_Nullable_System_Object__
-  commentId: M:Bashi.Core.TinyTypes.TinyType`1.Equals(System.Nullable{System.Object})
-  name.vb: Equals(Nullable(Of Object))
-  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equals(System.Nullable<System.Object>)
-  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals(System.Nullable(Of System.Object))
-  nameWithType: TinyType<T>.Equals(Nullable<Object>)
-  nameWithType.vb: TinyType(Of T).Equals(Nullable(Of Object))
+- uid: Bashi.Core.TinyTypes.TinyType`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_System_Object_
+  commentId: M:Bashi.Core.TinyTypes.TinyType`1.Equals(System.Object)
+  fullName: Bashi.Core.TinyTypes.TinyType<T>.Equals(System.Object)
+  fullName.vb: Bashi.Core.TinyTypes.TinyType(Of T).Equals(System.Object)
+  nameWithType: TinyType<T>.Equals(Object)
+  nameWithType.vb: TinyType(Of T).Equals(Object)
 - uid: Bashi.Core.TinyTypes.TinyType`1.Equals*
   name: Equals
   href: api/Bashi.Core.TinyTypes.TinyType-1.html#Bashi_Core_TinyTypes_TinyType_1_Equals_
