@@ -1,0 +1,56 @@
+name: Update Documentation
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: "[Setup] Checkout Repository"
+        uses: actions/checkout@v1
+
+      - name: "[Setup] Ensure 'master' branch exists"
+        run: |
+          git fetch --tags
+          git branch --create-reflog master origin/master
+
+      - name: "[Setup] Install docfx"
+        run: choco install -y docfx
+
+      - name: "[Build] Build Documentation"
+        run: docfx docs/docfx.json
+
+      - name: "[Upload] Upload Documentation Artifact"
+        uses: actions/upload-artifact@v1
+        with:
+          name: docs
+          path : docs/_site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "[Setup] Checkout Repository"
+        uses: actions/checkout@v1
+
+      - name: "[Download] Download Documentation Artifact"
+        uses: actions/download-artifact@v1
+        with:
+          name: docs
+
+      - name: "[Download] Download Material Theme"
+        run: |
+          mkdir docs/templates
+          wget -O /tmp/material.zip https://github.com/ovasquez/docfx-material/releases/download/0.3.0/material.zip
+          unzip /tmp/material.zip -d docs/templates
+
+      - name: "[Deploy] Deploy to GitHub Pages"
+        uses: JamesIves/github-pages-deploy-action@3.0.4
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages
+          FOLDER: "docs"

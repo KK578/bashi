@@ -3,6 +3,22 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
+        <entry key="docfx">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="docfx" />
+              <option name="relativePathToSchema" value="http://json.schemastore.org/docfx" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="docs/docfx.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
         <entry key="stylecop">
           <value>
             <SchemaInfo>

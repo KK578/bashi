@@ -5,10 +5,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <AdditionalFiles Include="StyleCop\stylecop.json"/>
-        <None Include="..\..\Directory.build.props">
-            <Link>MSBuild\Directory.build.props</Link>
+        <AdditionalFiles Include="StyleCop\stylecop.json" />
+        <None Include="..\..\Directory.Build.props">
+            <Link>MSBuild\Directory.Build.props</Link>
         </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.IO.Abstractions" Version="7.0.15" />
     </ItemGroup>
 
 </Project>
