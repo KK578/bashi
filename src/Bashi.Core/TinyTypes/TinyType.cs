@@ -39,7 +39,7 @@ namespace Bashi.Core.TinyTypes
         /// </summary>
         /// <param name="arg">The instance of the TinyType.</param>
         /// <returns>Returns <see cref="Value"/>.</returns>
-        public static implicit operator T(TinyType<T> arg) => arg.Value ?? default;
+        public static implicit operator T(TinyType<T> arg) => arg.Value;
 
         /// <summary>
         /// Overriding operator for equality check between two <see cref="TinyType{T}"/> instances.
