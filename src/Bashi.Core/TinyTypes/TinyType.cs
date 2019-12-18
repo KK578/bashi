@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Bashi.Core.TinyTypes
 {
@@ -39,6 +40,7 @@ namespace Bashi.Core.TinyTypes
         /// </summary>
         /// <param name="arg">The instance of the TinyType.</param>
         /// <returns>Returns <see cref="Value"/>.</returns>
+        [SuppressMessage("ReSharper", "CA2225", Justification = "Operator is a shorthand for accessing the Value property.")]
         public static implicit operator T(TinyType<T> arg) => arg.Value;
 
         /// <summary>
@@ -49,7 +51,7 @@ namespace Bashi.Core.TinyTypes
         /// <returns>Indicates whether the two instances are equal.</returns>
         public static bool operator ==(TinyType<T>? left, TinyType<T>? right)
         {
-            return Equals(left, right);
+            return !ReferenceEquals(left, null) && left.Equals(right);
         }
 
         /// <summary>
@@ -60,7 +62,51 @@ namespace Bashi.Core.TinyTypes
         /// <returns>Indicates whether the two instances are not equal.</returns>
         public static bool operator !=(TinyType<T>? left, TinyType<T>? right)
         {
-            return !Equals(left, right);
+            return !(left == right);
+        }
+
+        /// <summary>
+        /// Overriding operator for less than check between two <see cref="TinyType{T}"/> instances.
+        /// </summary>
+        /// <param name="left">First instance to be compared.</param>
+        /// <param name="right">Second instance to be compared.</param>
+        /// <returns>Indicates whether the left instance is less than the right instance.</returns>
+        public static bool operator <(TinyType<T> left, TinyType<T> right)
+        {
+            return ReferenceEquals(left, null) ? !ReferenceEquals(right, null) : left.CompareTo(right) < 0;
+        }
+
+        /// <summary>
+        /// Overriding operator for less than or equal to check between two <see cref="TinyType{T}"/> instances.
+        /// </summary>
+        /// <param name="left">First instance to be compared.</param>
+        /// <param name="right">Second instance to be compared.</param>
+        /// <returns>Indicates whether the left instance is less than or equal to the right instance.</returns>
+        public static bool operator <=(TinyType<T> left, TinyType<T> right)
+        {
+            return ReferenceEquals(left, null) || left.CompareTo(right) <= 0;
+        }
+
+        /// <summary>
+        /// Overriding operator for greater than check between two <see cref="TinyType{T}"/> instances.
+        /// </summary>
+        /// <param name="left">First instance to be compared.</param>
+        /// <param name="right">Second instance to be compared.</param>
+        /// <returns>Indicates whether the left instance is greater than the right instance.</returns>
+        public static bool operator >(TinyType<T> left, TinyType<T> right)
+        {
+            return !ReferenceEquals(left, null) && left.CompareTo(right) > 0;
+        }
+
+        /// <summary>
+        /// Overriding operator for greater than or equal to check between two <see cref="TinyType{T}"/> instances.
+        /// </summary>
+        /// <param name="left">First instance to be compared.</param>
+        /// <param name="right">Second instance to be compared.</param>
+        /// <returns>Indicates whether the left instance is greater than or equal to the right instance.</returns>
+        public static bool operator >=(TinyType<T> left, TinyType<T> right)
+        {
+            return ReferenceEquals(left, null) ? ReferenceEquals(right, null) : left.CompareTo(right) >= 0;
         }
 
         /// <inheritdoc />
@@ -109,6 +155,11 @@ namespace Bashi.Core.TinyTypes
         /// <inheritdoc />
         public virtual int CompareTo(TinyType<T> other)
         {
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other), $"Cannot compare {this.GetType()} to null.");
+            }
+
             return this.Value.CompareTo(other.Value);
         }
 

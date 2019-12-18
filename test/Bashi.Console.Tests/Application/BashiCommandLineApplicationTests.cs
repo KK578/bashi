@@ -18,7 +18,7 @@ namespace Bashi.Console.Tests.Application
         public async Task CommandLine_GivenVersionFlag_ThenShouldDisplayApplicationVersion()
         {
             var arguments = this.CreateArguments("--version");
-            var exitCode = await this.ExecuteAsync(arguments);
+            var exitCode = await this.ExecuteAsync(arguments).ConfigureAwait(false);
             Assert.That(exitCode, Is.Zero);
         }
 
@@ -27,7 +27,7 @@ namespace Bashi.Console.Tests.Application
         public async Task GivenAnAnimeDownloadCommand_ThenShouldDownloadToTheSpecifiedOutput()
         {
             var arguments = this.CreateArguments("anime", "download", "\"Shinchou Yuusha\"", "-s", "1", "-e", "1", "-o", "videos/");
-            var exitCode = await this.ExecuteAsync(arguments);
+            var exitCode = await this.ExecuteAsync(arguments).ConfigureAwait(false);
             Assert.That(exitCode, Is.Zero);
             FileAssert.Exists("videos/Shinchou Yuusha/Shinchou Yuusha - S01E01.mp4");
         }
