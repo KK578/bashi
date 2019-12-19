@@ -1,5 +1,7 @@
 # BASHI - A collection of random tools
 
+[![Coverage Status](https://coveralls.io/repos/github/KK578/bashi/badge.svg?branch=master)](https://coveralls.io/github/KK578/bashi?branch=master)
+
 ## Documentation
 
 See [](https://kk578.github.io/bashi/) for documentation.
