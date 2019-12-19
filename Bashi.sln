@@ -21,6 +21,8 @@ ProjectSection(SolutionItems) = preProject
 	.github\workflows\build.yml = .github\workflows\build.yml
 	.github\workflows\docs.yml = .github\workflows\docs.yml
 	docs\docfx.json = docs\docfx.json
+	LICENSE.md = LICENSE.md
+	README.md = README.md
 EndProjectSection
 EndProject
 Global
