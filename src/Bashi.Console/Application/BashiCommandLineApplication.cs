@@ -20,6 +20,6 @@ namespace Bashi.Console.Application
         /// <summary>
         /// Gets the version number for Bashi command line.
         /// </summary>
-        public string Version => FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
+        public static string Version => FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
     }
 }

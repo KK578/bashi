@@ -25,6 +25,17 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
         <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.113"/>
     </ItemGroup>
+
+    <PropertyGroup>
+        <NoWarn>
+            $(NoWarn);
+            CA1062; <!-- Validate arguments of public methods - Not checking for nulls as we are using C#8 nullable reference types. -->
+        </NoWarn>
+    </PropertyGroup>
 </Project>

@@ -7,11 +7,10 @@ namespace Bashi.Tests.Framework.Data
 {
     public static class TestData
     {
-        private static readonly Fixture Fixture;
+        private static readonly Fixture Fixture = new Fixture();
 
         static TestData()
         {
-            Fixture = new Fixture();
             WellKnownInt = NextInt();
             WellKnownString = NextString();
         }

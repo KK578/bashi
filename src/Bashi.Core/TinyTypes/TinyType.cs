@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Bashi.Core.TinyTypes
 {
@@ -17,6 +18,7 @@ namespace Bashi.Core.TinyTypes
     /// the wrapped <typeparamref name="T"/> type.
     /// </summary>
     /// <typeparam name="T">Underlying value type.</typeparam>
+    [SuppressMessage("FxCop", "CA1036", Justification = "Generic T may not be relevant for <. <=, >, >= operators.")]
     public abstract class TinyType<T> : IEquatable<TinyType<T>>, IComparable<TinyType<T>>, IComparable
         where T : notnull, IComparable<T>, IComparable
     {
@@ -39,6 +41,7 @@ namespace Bashi.Core.TinyTypes
         /// </summary>
         /// <param name="arg">The instance of the TinyType.</param>
         /// <returns>Returns <see cref="Value"/>.</returns>
+        [SuppressMessage("ReSharper", "CA2225", Justification = "Operator is a shorthand for accessing the Value property.")]
         public static implicit operator T(TinyType<T> arg) => arg.Value;
 
         /// <summary>
@@ -49,7 +52,12 @@ namespace Bashi.Core.TinyTypes
         /// <returns>Indicates whether the two instances are equal.</returns>
         public static bool operator ==(TinyType<T>? left, TinyType<T>? right)
         {
-            return Equals(left, right);
+            if (ReferenceEquals(left, null))
+            {
+                return ReferenceEquals(right, null);
+            }
+
+            return left.Equals(right);
         }
 
         /// <summary>
@@ -60,7 +68,7 @@ namespace Bashi.Core.TinyTypes
         /// <returns>Indicates whether the two instances are not equal.</returns>
         public static bool operator !=(TinyType<T>? left, TinyType<T>? right)
         {
-            return !Equals(left, right);
+            return !(left == right);
         }
 
         /// <inheritdoc />
@@ -107,8 +115,13 @@ namespace Bashi.Core.TinyTypes
         }
 
         /// <inheritdoc />
-        public virtual int CompareTo(TinyType<T> other)
+        public virtual int CompareTo(TinyType<T>? other)
         {
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other), $"Cannot compare {this.GetType()} to null.");
+            }
+
             return this.Value.CompareTo(other.Value);
         }
 

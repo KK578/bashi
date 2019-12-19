@@ -8,7 +8,13 @@
                 (but other parameters do)
         CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
         -->
-        <NoWarn>$(NoWarn),1573,1591,1712</NoWarn>
+        <NoWarn>
+            $(NoWarn),
+            1573,
+            1591, <!-- Missing XML comment for publicly visible type or member. Tests do not require XML comments. -->
+            1712,
+            CA1707 <!-- Remove the underscores from member name. Tests can have underscores for clarity. -->
+        </NoWarn>
     </PropertyGroup>
 
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))"/>

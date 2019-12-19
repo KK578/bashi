@@ -33,8 +33,13 @@ namespace Bashi.Core.TinyTypes
         }
 
         /// <inheritdoc />
-        public override int CompareTo(TinyType<string> other)
+        public override int CompareTo(TinyType<string>? other)
         {
+            if (other == null)
+            {
+                throw new ArgumentNullException(nameof(other), $"Cannot compare {this.GetType()} to null.");
+            }
+
             return this.comparer.Compare(this.Value, other.Value);
         }
 
