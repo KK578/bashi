@@ -64,11 +64,12 @@ namespace Bashi.Core.Tests.TinyTypes
         }
 
         [Test]
-        public void CompareTo_GivenNonMatchingTypes_ThenWillThrowException()
+        public void CompareTo_GivenNullOrNonMatchingTypes_ThenWillThrowException()
         {
             var tt = new MyNumber(TestData.WellKnownInt);
 
             Assert.That(() => tt.CompareTo((object?)null), Throws.ArgumentNullException);
+            Assert.That(() => tt.CompareTo((MyNumber?)null), Throws.ArgumentNullException);
             Assert.That(() => tt.CompareTo(TestData.WellKnownInt), Throws.ArgumentException);
             Assert.That(() => tt.CompareTo(TestData.WellKnownString), Throws.ArgumentException);
         }

@@ -52,7 +52,12 @@ namespace Bashi.Core.TinyTypes
         /// <returns>Indicates whether the two instances are equal.</returns>
         public static bool operator ==(TinyType<T>? left, TinyType<T>? right)
         {
-            return !ReferenceEquals(left, null) && left.Equals(right);
+            if (ReferenceEquals(left, null))
+            {
+                return ReferenceEquals(right, null);
+            }
+
+            return left.Equals(right);
         }
 
         /// <summary>
@@ -110,7 +115,7 @@ namespace Bashi.Core.TinyTypes
         }
 
         /// <inheritdoc />
-        public virtual int CompareTo(TinyType<T> other)
+        public virtual int CompareTo(TinyType<T>? other)
         {
             if (other == null)
             {

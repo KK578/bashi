@@ -13,6 +13,14 @@ namespace Bashi.Core.Tests.TinyTypes
     public class TinyStringTests
     {
         [Test]
+        public void CompareTo_GivenNull_ThenShouldThrowException()
+        {
+            var tt = new MyTinyString(TestData.WellKnownString);
+            Assert.That(() => tt.CompareTo((object?)null), Throws.ArgumentNullException);
+            Assert.That(() => tt.CompareTo((MyTinyString?)null), Throws.ArgumentNullException);
+        }
+
+        [Test]
         public void Equals_GivenStringsWithDifferentCases_WhenStringComparerIgnoresCase_ThenShouldBeTrue()
         {
             var tt = new MyTinyString(TestData.WellKnownString);
