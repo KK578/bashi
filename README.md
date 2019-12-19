@@ -1,10 +1,10 @@
-# BASHI - A collection of random tools
+# :dog: BASHI - A collection of random tools :tada:
 
 [![Coverage Status](https://coveralls.io/repos/github/KK578/bashi/badge.svg?branch=master)](https://coveralls.io/github/KK578/bashi?branch=master)
 
 ## Documentation
 
-See [](https://kk578.github.io/bashi/) for documentation.
+See [GitHub Pages](https://kk578.github.io/bashi/) for documentation.
 
 ## License
 
