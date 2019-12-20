@@ -54,6 +54,8 @@ jobs:
         run: dotnet /home/runner/work/bashi/bashi/build/out/Bashi.Console/bin/Release/netcoreapp3.1/Bashi.Console.dll --version
 
       - name: "[Coverage] Upload to SonarCloud"
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         env:
           SONARCLOUD_LOGIN: ${{ secrets.SONARCLOUD_LOGIN }}
         run: |
