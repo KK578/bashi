@@ -37,7 +37,7 @@ jobs:
         run: |
           VERSION=$(cat version.txt)
           dotnet tool install --global dotnet-sonarscanner --version 4.8.0
-          ~/.dotnet/tools/dotnet-sonarscanner begin /k:"KK578_bashi" /o:"KK578" /d:sonar.login="$SONARCLOUD_LOGIN" /v:"$VERSION"
+          ~/.dotnet/tools/dotnet-sonarscanner begin /k:"KK578_bashi" /o:"KK578" /d:sonar.login="$SONARCLOUD_LOGIN" /d:sonar.host.url=https://sonarcloud.io /v:"$VERSION"
 
       - name: "[Build] Build Solution"
         run: |
