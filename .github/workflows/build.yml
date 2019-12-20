@@ -37,7 +37,7 @@ jobs:
         run: |
           VERSION=$(cat version.txt)
           dotnet tool install --global dotnet-sonarscanner --version 4.8.0
-          dotnet sonarscanner begin /k:"KK578_bashi" /o:"KK578" /d:sonar.login="$SONARCLOUD_LOGIN" /v:"$VERSION"
+          ~/.dotnet/tools/dotnet-sonarscanner begin /k:"KK578_bashi" /o:"KK578" /d:sonar.login="$SONARCLOUD_LOGIN" /v:"$VERSION"
 
       - name: "[Build] Build Solution"
         run: |
@@ -57,7 +57,7 @@ jobs:
         env:
           SONARCLOUD_LOGIN: ${{ secrets.SONARCLOUD_LOGIN }}
         run: |
-          dotnet sonarscanner end /d:sonar.login="$SONARCLOUD_LOGIN"
+          ~/.dotnet/tools/dotnet-sonarscanner end /d:sonar.login="$SONARCLOUD_LOGIN"
 
       - name: "[Coverage] Upload to Coveralls"
         uses: coverallsapp/github-action@v1.0.1
