@@ -11,8 +11,4 @@
         </None>
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="System.IO.Abstractions" Version="7.0.15" />
-    </ItemGroup>
-
 </Project>
