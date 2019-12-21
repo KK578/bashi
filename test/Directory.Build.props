@@ -1,4 +1,6 @@
 <Project>
+    <Import Project="../Directory.Build.props"/>
+
     <PropertyGroup>
         <!--
         Make sure any documentation comments which are included in code get checked for syntax
@@ -17,5 +19,8 @@
         </NoWarn>
     </PropertyGroup>
 
-    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))"/>
+    <ItemGroup>
+        <AdditionalFiles Remove="$(MSBuildThisFileDirectory)../stylecop.json"/>
+        <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json"/>
+    </ItemGroup>
 </Project>
