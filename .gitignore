@@ -428,8 +428,27 @@ MigrationBackup/
 
 
 
-#################################
-### Code Coverage
+###############################################################
+# Created by https://www.gitignore.io/api/sonar,sonarqube     #
+# Edit at https://www.gitignore.io/?templates=sonar,sonarqube #
+###############################################################
+
+### Code Coverage ###
 coverage/
 
-#################################
+# Sonar generated dir
+/.sonar/
+
+# https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner
+# Sonar Scanner working directories
+.sonar/
+.sonarqube/
+.scannerwork/
+
+# http://www.sonarlint.org/commandline/
+# SonarLint working directories, configuration files (including credentials)
+.sonarlint/
+
+#######################################################
+# End of https://www.gitignore.io/api/sonar,sonarqube #
+#######################################################
