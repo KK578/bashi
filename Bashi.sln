@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bashi.Console", "src\Bashi.Console\Bashi.Console.csproj", "{9D66B9BA-2636-4F26-9906-7967E6CCF392}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{4F8E7D29-123E-4BAA-B472-5C38359F6C23}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command", "Command", "{4F8E7D29-123E-4BAA-B472-5C38359F6C23}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{40647E4A-AC6D-4D46-8401-4C45EE07CFDD}"
 EndProject
@@ -23,6 +23,8 @@ ProjectSection(SolutionItems) = preProject
 	docs\docfx.json = docs\docfx.json
 	LICENSE.md = LICENSE.md
 	README.md = README.md
+	Directory.Build.props = Directory.Build.props
+	test\Directory.Build.props = test\Directory.Build.props
 EndProjectSection
 EndProject
 Global

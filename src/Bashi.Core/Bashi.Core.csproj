@@ -4,11 +4,4 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
-    <ItemGroup>
-        <AdditionalFiles Include="StyleCop\stylecop.json" />
-        <None Include="..\..\Directory.Build.props">
-            <Link>MSBuild\Directory.Build.props</Link>
-        </None>
-    </ItemGroup>
-
 </Project>

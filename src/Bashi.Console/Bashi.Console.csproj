@@ -10,12 +10,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AdditionalFiles Include="..\Bashi.Core\StyleCop\stylecop.json">
-            <Link>stylecop.json</Link>
-        </AdditionalFiles>
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.4.4"/>
         <PackageReference Include="McMaster.Extensions.Hosting.CommandLine" Version="2.4.4"/>
     </ItemGroup>
