@@ -2,6 +2,7 @@
 // Licensed under the BSD-3-Clause license. See BSD-3-Clause.md for full details.
 
 using System.Diagnostics.CodeAnalysis;
+using BlazorStrap;
 using Mandarin.ClientApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +38,7 @@ namespace Mandarin.ClientApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddBootstrapCSS();
             services.AddSingleton<WeatherForecastService>();
         }
 
