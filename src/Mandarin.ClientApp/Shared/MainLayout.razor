@@ -1,24 +1,9 @@
 ﻿@inherits LayoutComponentBase
 
-@inject IBootstrapCSS BootstrapCss;
-
-<div class="sidebar">
-    <NavMenu />
-</div>
+<NavMenu />
 
 <div class="main">
     <div class="content px-4">
         @Body
     </div>
 </div>
-
-@code {
-
-    /// <inheritdoc />
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await base.OnAfterRenderAsync(firstRender);
-        await BootstrapCss.SetBootstrapCSS("4.3.1");
-    }
-
-}
