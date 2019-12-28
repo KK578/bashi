@@ -3,6 +3,22 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
+        <entry key="compilerconfig">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="compilerconfig" />
+              <option name="relativePathToSchema" value="http://json.schemastore.org/compilerconfig" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/Mandarin.ClientApp/compilerconfig.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
         <entry key="docfx">
           <value>
             <SchemaInfo>
