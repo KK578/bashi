@@ -43,7 +43,7 @@ jobs:
         run: dotnet restore
 
       - name: "[Build] Build Styles"
-        run: gulp compile
+        run: cd src/Mandarin.ClientApp && gulp compile
 
       - name: "[Build] Build Solution"
         run: |
