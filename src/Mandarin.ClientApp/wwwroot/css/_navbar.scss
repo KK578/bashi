@@ -1,12 +1,15 @@
 @import "site.theme.scss";
+@import "_mixins.scss";
 
 .navbar {
   $mandarin-navbar-logo-size: 64px;
   $mandarin-navbar-line-size: 3px;
   $mandarin-navbar-line-margin: 10px;
 
+  @include user-select(none);
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 
   .navbar-brand {
     display: flex;
@@ -33,6 +36,26 @@
       height: $mandarin-navbar-line-size;
       background: $mandarin-color-highlight;
       margin: auto $mandarin-navbar-line-margin;
+    }
+  }
+
+  .nav-item {
+    @include transition(ease-in-out(color), ease-in-out(box-shadow));
+
+    font-size: 0.9em;
+    color: $mandarin-color-text-light;
+    padding: 1px 0;
+
+    // For underline
+    text-shadow: -2px -2px $mandarin-color-background, -2px 2px $mandarin-color-background, 2px -2px $mandarin-color-background, 2px 2px $mandarin-color-background;
+    background-size: 1px 1em;
+
+    &:hover {
+      color: $mandarin-color-highlight;
+    }
+
+    &.active {
+      box-shadow: inset 0 0.9em $mandarin-color-background, inset 0 -0.07em $mandarin-color-highlight;
     }
   }
 }
