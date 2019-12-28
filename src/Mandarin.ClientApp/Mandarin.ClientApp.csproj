@@ -7,5 +7,11 @@
     <ItemGroup>
         <PackageReference Include="BlazorStrap" Version="1.1.101" />
     </ItemGroup>
+    
+    <ItemGroup>
+        <Content Update="**/*.scss;" CopyToPublishDirectory="Never" />
+        <Content Update="package.json" CopyToPublishDirectory="Never" />
+        <Content Update="package-lock.json" CopyToPublishDirectory="Never" />
+    </ItemGroup>
 
 </Project>

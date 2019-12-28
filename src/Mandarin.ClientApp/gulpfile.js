@@ -5,12 +5,14 @@ const sass = require('gulp-sass');
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 
-function debug() {
-    const stream = arguments[0];
-
-    console.log(stream);
-
-    return stream;
+function debugLog(data) {
+    try {
+        const filename = data.history[0];
+        log.info(filename);
+    }
+    catch {
+        // Intentional ignore.
+    }
 }
 
 function cleanSass() {
@@ -22,6 +24,7 @@ async function compileSass(cb) {
     await gulp.src('./wwwroot/css/*.scss', { since: gulp.lastRun(compileSass) })
         .on('data', (data) => log.info(JSON.stringify(data.history[0])))
         .pipe(sass())
+        .pipe(gulp.dest('./wwwroot/css/'))
         .pipe(cleanCss())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./wwwroot/css/'));
