@@ -9,8 +9,7 @@ function debugLog(data) {
     try {
         const filename = data.history[0];
         log.info(filename);
-    }
-    catch {
+    } catch {
         // Intentional ignore.
     }
 }
@@ -19,16 +18,13 @@ function cleanSass() {
     return del('./wwwroot/css/*.css');
 }
 
-async function compileSass(cb) {
-    await del('./wwwroot/css/**.css');
-    await gulp.src('./wwwroot/css/*.scss', { since: gulp.lastRun(compileSass) })
-        .on('data', (data) => log.info(JSON.stringify(data.history[0])))
-        .pipe(sass())
+async function compileSass() {
+    return await gulp.src('./wwwroot/css/**.scss')
+        .pipe(sass().on('error', log.error))
         .pipe(gulp.dest('./wwwroot/css/'))
-        .pipe(cleanCss())
+        .pipe(cleanCss().on('error', log.error))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./wwwroot/css/'));
-    cb();
+        .pipe(gulp.dest('./wwwroot/css/'))
 }
 
 function watchSass(cb) {
