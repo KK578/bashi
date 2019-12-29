@@ -26,6 +26,10 @@
       width: $mandarin-navbar-logo-size;
     }
 
+    a:hover {
+      text-decoration: none;
+    }
+
     .header {
       color: $mandarin-color-highlight;
       font-family: "Century Schoolbook L", serif;

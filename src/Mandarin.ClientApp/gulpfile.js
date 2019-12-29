@@ -5,15 +5,6 @@ const sass = require('gulp-sass');
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 
-function debugLog(data) {
-    try {
-        const filename = data.history[0];
-        log.info(filename);
-    } catch {
-        // Intentional ignore.
-    }
-}
-
 function cleanSass() {
     return del('./wwwroot/css/*.css');
 }
@@ -27,7 +18,8 @@ async function compileSass() {
         .pipe(gulp.dest('./wwwroot/css/'))
 }
 
-function watchSass(cb) {
+async function watchSass(cb) {
+    await compileSass();
     gulp.watch('./wwwroot/css/**.scss', compileSass);
 }
 
