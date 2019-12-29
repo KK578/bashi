@@ -1,5 +1,82 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<BSCarousel NumberOfItems="@Images.Count">
+        @* <BSCarouselIndicators NumberOfItems="@Images.Count" /> *@
+        <div class="carousel-inner">
+            @foreach (var image in Images)
+            {
+                <BSCarouselItem src="@image.Source"/>
+            }
+        </div>
+        <BSCarouselControl CarouselDirection="CarouselDirection.Previous" NumberOfItems="@Images.Count" />
+        <BSCarouselControl CarouselDirection="CarouselDirection.Next" NumberOfItems="@Images.Count" />
+</BSCarousel>
 
-Welcome to your new app.
+<hr/>
+
+<p>
+    The Little Mandarin is a family-run Art and Illustration Shop and Confectionary found in the
+    heart of Walthamstow Village, E17. The owner, Eileen Kai Hing Kwan is a local Illustrator who
+    has lived in Walthamstow for most of her life and after taking over from her parents, the
+    previous owners, this makes The Little Mandarin the third chapter of the family’s shop.
+</p>
+
+<p>
+    The Little Mandarin believes in welcoming and supporting all types of artists and styles of art,
+    bringing a range of art prints, framed art, notebooks, gifts and more, from our little space in
+    the village into the thriving creative community of Walthamstow.
+</p>
+
+<p>
+    We are also the proud hosts of, The Mini Mandarin, selling handmade and hand finished
+    ‘bearcarons’ (bear shaped macarons!) alongside a variety of sweet snacks and drinks from Asia.
+</p>
+
+<p>
+    We hope to see you soon!
+</p>
+
+<hr/>
+
+<BSContainer>
+    <BSRow>
+        <BSCol xs="12" md="5">
+            <Flex className={styles.openingTimesContainer} column>
+                <OpeningTimes/>
+            </Flex>
+        </BSCol>
+        <BSCol xs="12" md="7">
+            @* <MandarinMap/> *@
+            <BSImage src="https://via.placeholder.com/500x300"></BSImage>
+        </BSCol>
+    </BSRow>
+</BSContainer>
+
+@code {
+
+           private IReadOnlyList<ImageViewModel> Images { get; } = new List<ImageViewModel>
+           {
+               new ImageViewModel
+               {
+                   Source = "https://thelittlemandarin.co.uk/static/images/about/TheLittleMandarin-1.jpg",
+               },
+               new ImageViewModel
+               {
+                   Source = "https://thelittlemandarin.co.uk/static/images/about/TheLittleMandarin-2.jpg",
+               },
+               new ImageViewModel
+               {
+                   Source = "https://thelittlemandarin.co.uk/static/images/about/TheLittleMandarin-3.jpg"
+               },
+               new ImageViewModel
+               {
+                   Source = "https://thelittlemandarin.co.uk/static/images/about/TheLittleMandarin-4.jpg"
+               }
+           };
+
+           private class ImageViewModel
+           {
+               public string? Source { get; set; }
+           }
+
+}
