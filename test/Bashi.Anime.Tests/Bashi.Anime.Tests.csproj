@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Bashi.Anime\Bashi.Anime.csproj" />
+        <ProjectReference Include="..\Bashi.Tests.Framework\Bashi.Tests.Framework.csproj" />
+    </ItemGroup>
+
+</Project>
